@@ -11,6 +11,7 @@ export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export EDITOR="vim"
 
 # Path to your oh-my-zsh installation.
+export ZSH_CUSTOM=`realpath ~/.dotfiles/custom`
 export ZSH=`realpath ~/.dotfiles/.oh-my-zsh`
 
 # Set name of the theme to load --- if set to "random", it will
