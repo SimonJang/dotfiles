@@ -4,3 +4,6 @@
 [submodule "custom/themes/powerlevel9k"]
 	path = custom/themes/powerlevel9k
 	url = https://github.com/bhilburn/powerlevel9k.git
+[submodule "tpm"]
+	path = tpm
+	url = git@github.com:tmux-plugins/tpm.git
