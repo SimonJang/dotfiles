@@ -110,10 +110,19 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias update="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo snap refresh"
+alias update="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo snap refresh && pip install --upgrade awscli aws-sam-cli cfn-lint"
+alias barcovpnup="sudo openvpn --mktun --dev tun1 && sudo ip link set tun1 up && sudo openconnect kuuvpn.barco.com/token --interface tun1"
+alias barcovpndown="sudo ip link set tun1 down && sudo openvpn --rmtun --dev tun1"
 
 # NVM configuration
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# Add homebrew to PATH
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH
+
+# JAVA configuration
+export JAVA_HOME=/usr/lib/jvm/default-java
+export PATH=$PATH:$JAVA_HOME/bin
